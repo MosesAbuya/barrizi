@@ -1,0 +1,121 @@
+.adopt {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  .adopt-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/ad.png);
+    background-size: cover;
+    background-position: center;
+    border-bottom: 10px solid #f27420;
+    .adopt-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      margin-top: 140px;
+      .slide-in-left {
+        opacity: 0;
+        transform: translateX(-100px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      }
+
+      .slide-in-left.active {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .slide-in-right {
+        opacity: 0;
+        transform: translateX(100px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      }
+
+      .slide-in-right.active {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .adopt-col-h {
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+        margin-right: 100px;
+        width: 30%;
+        height: 300px;
+        background-color: #ffffff63;
+        border-radius: 10px;
+        padding: 10px;
+        transform: rotate(10deg);
+
+        h1 {
+          color: #f27420;
+          font-size: 6rem;
+          font-weight: 800;
+        }
+      }
+      .adopt-col-p {
+        margin-right: 20px;
+        width: 30%;
+        background-color: #0000009e;
+        border-radius: 10px;
+        padding: 10px;
+        transform: rotate(-10deg);
+        p {
+          color: aliceblue;
+          font-size: 14px;
+          font-weight: 300;
+        }
+      }
+    }
+    .adopt-btn {
+      width: fit-content;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: -25px;
+      .btn {
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .adopt {
+    height: fit-content;
+    margin-bottom: 100px;
+    .adopt-container {
+      height: fit-content;
+      .adopt-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        justify-content: space-between;
+        .adopt-col-h {
+          width: 100%;
+        }
+        #col-h {
+          width: 100%;
+          margin-left: 100px;
+          top: 0;
+          background-color: transparent;
+          h1 {
+            font-size: 4rem;
+            text-align: center;
+            margin-bottom: -240px;
+          }
+        }
+        .adopt-col-p {
+          width: 100%;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
