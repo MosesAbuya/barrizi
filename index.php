@@ -1702,4 +1702,11 @@
                 });
             }
 
-            window.addEventListener(
+            window.addEventListener('scroll', animateBars, { passive: true });
+            animateBars();
+        })();
+    </script>
+
+</body>
+
+</html>
